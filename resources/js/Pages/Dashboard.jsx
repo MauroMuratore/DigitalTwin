@@ -20,7 +20,7 @@ const Dashboard = ({ maps, token }) => {
 
     useEffect(() => {
         const fetchDeviceContext = async () => {
-            const response = await fetch(backend + '/device')
+            const response = await fetch(backend + '/virtual/device')
             const result = await response.json()
             console.log(result)
             setDeviceContext(result)

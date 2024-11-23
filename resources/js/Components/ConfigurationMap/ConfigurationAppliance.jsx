@@ -235,7 +235,7 @@ export default function ConfigurationAppliance({ editMode, endSection }) {
 
     useEffect(() => {
         const fetchUnconfAppl = async () => {
-            const response = await fetch(backend + "/device", {
+            const response = await fetch(backend + "/virtual/device", {
                 headers: { 'Authorization': 'Bearer ' + token }
             })
             const result = await response.json()
@@ -277,7 +277,7 @@ export default function ConfigurationAppliance({ editMode, endSection }) {
                 </Modal>
                 <div className="flex w-full">
                     <div className="w-3/5 h-full flex justify-center items-center">
-                        <div className="relative size-full flex justify-center items-center shadow">
+                        <div className="relative flex justify-center items-center shadow">
                             <div {...handlerSwipe}>
                                 <AnimatePresence>
                                     {maps[indexImg] &&
